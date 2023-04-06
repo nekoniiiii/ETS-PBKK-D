@@ -6,24 +6,34 @@
         xmlns:local="clr-namespace:ETS_CurrencyConverter"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="251,98,0,0" VerticalAlignment="Top" Width="90" SelectionChanged="ComboBox_SelectionChanged">
+    <Grid Background="#FFBAE058">
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="243,136,0,0" VerticalAlignment="Top" Width="90" SelectionChanged="ComboBox_SelectionChanged" FontSize="20">
             <ComboBoxItem x:Name="comboBoxItem1" Content="USD"/>
             <ComboBoxItem Content="EUR"/>
             <ComboBoxItem Content="IDR"/>
+            <ComboBoxItem Content="JPY"/>
+            <ComboBoxItem Content="MYR"/>
         </ComboBox>
-        <Button Content="Convert&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" FontSize="16" Height="25" Width="102" Click="Button_Click"/>
-        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="557,98,0,0" VerticalAlignment="Top" Width="90" SelectionChanged="ComboBox_SelectionChanged_1">
+        <Button x:Name="button1" Content="Convert&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" FontSize="22" Height="38" Width="102" Click="Button_Click"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="515,135,0,0" VerticalAlignment="Top" Width="90" SelectionChanged="ComboBox_SelectionChanged_1" FontSize="20">
             <ComboBoxItem x:Name="comboBoxItem2" Content="USD"/>
             <ComboBoxItem Content="EUR"/>
             <ComboBoxItem Content="IDR"/>
+            <ComboBoxItem Content="JPY"/>
+            <ComboBoxItem Content="MYR"/>
         </ComboBox>
-        <Label Content="Currency Converter&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Currency&#xD;&#xA;" HorizontalAlignment="Left" Margin="153,94,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label Content="Amount&#xD;&#xA;" HorizontalAlignment="Left" Margin="153,147,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label Content="Currency&#xD;&#xA;" HorizontalAlignment="Left" Margin="461,94,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label Content="Amount" HorizontalAlignment="Left" Margin="461,147,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="251,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" TextChanged="TextBox_TextChanged_2"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="557,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" TextChanged="TextBox_TextChanged_3"/>
+        <Label Content="Currency Converter&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
+        <Label Content="From&#xA;" HorizontalAlignment="Left" Margin="145,132,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label Content="Amount&#xD;&#xA;" HorizontalAlignment="Left" Margin="145,184,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label Content="To&#xA;" HorizontalAlignment="Left" Margin="429,131,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label Content="Result" HorizontalAlignment="Left" Margin="429,184,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="243,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="515,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" TextChanged="TextBox_TextChanged_3"/>
+        <Image HorizontalAlignment="Left" Height="137" Margin="635,280,0,0" VerticalAlignment="Top" Width="144">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/icons-currency-trade.png" Stretch="Uniform"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="161" Margin="603,252,0,0" VerticalAlignment="Top" Width="173" Source="/icons-currency-trade.png"/>
     </Grid>
 </Window>
